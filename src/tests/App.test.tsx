@@ -44,7 +44,7 @@ describe('Requisito 1', () => {
     expect(favPokemonText).toBeInTheDocument();
   });
 
-  it('Teste se a aplicação é redirecionada para a página Not Found ao entrar em uma URL desconhecida.', async () => {
+  it('Teste se a aplicação é redirecionada para a página Not Found ao entrar em uma URL desconhecida.', () => {
     renderWithRouter(<App />, { route: '/teste' });
     const notFoundText = screen.getByRole('heading', {
       name: /page requested not found/i,
